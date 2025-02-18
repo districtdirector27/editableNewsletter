@@ -80,7 +80,7 @@
         /* Content Styles */
         .content {
             background-color: #ffffff;
-            border: 0px solid #dddddd;
+            border: 1px solid #dddddd;
             width: 600px;
             margin: 0 auto;
         }
@@ -135,7 +135,7 @@
     </style>
 </head>
 <body>
-    <table class="content" style="width: 600px;">
+    <table class="content">
         <tr>
             <td align="center">
                 <!-- Header -->
@@ -144,53 +144,50 @@
                     <h2>District Updates for {{ district_label }}</h2>
                     <p>
                         <br>
-                        Stay informed easily with upcoming events, news, and tools just for you.  <br>
-                       I started building this growing toolset when I was a district director to help me, 
-                       <br> and I hope it helps you too.  - <i>Evan</i>
-                       <br> <br> <i> How can this email be more helpful? What info or tools would make your day easier? 
-                       <br>Just <b>reply</b> and let me know!  </i><br><br>
-                           
-                        </p>
-                    </div>
+                        Stay informed easily with upcoming events and news just for you.  <br>
+                        I started building this growing toolset when I was a district director to help me,and I hope it helps you too.  
+                     - <i>Evan</i> 
+                     <br><br> How can this email be more helpful? What info or tools would make your day easier?
+                     Just reply and let me know! 
+                     <br>
+                    </p>
                 </div>
-            </td>
-        </tr>
-        <tr>
-            <td align="center" style="background-color: #f0f8ff;  padding: 20px;">
-                <h2 style="font-size: 18px; color: #444444; margin: 0 0 15px 0;">Quick Searches</h2>
-                <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto;">
-                    <tr>
-                        <td style="white-space: nowrap; text-align: center;">
-                            <a href="https://www.mygovtools.org/app/find-your-representatives" style="display: inline-block; text-decoration: none; margin-right: 10px;">
-                                <table role="presentation" cellspacing="0" cellpadding="0" border="0">
-                                    <tr>
-                                        <td style="background: #46a0ea; border-radius: 5px; text-align: center;">
-                                            <span style="display: block; padding: 10px 10px; color: #ffffff; font-weight: bold; font-family: Arial, sans-serif; font-size: 14px;">Representatives</span>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </a>
-                            <a href="https://www.mygovtools.org/app/organization-search" style="display: inline-block; text-decoration: none;">
-                                <table role="presentation" cellspacing="0" cellpadding="0" border="0">
-                                    <tr>
-                                        <td style="background: #46a0ea; border-radius: 5px; text-align: center;">
-                                            <span style="display: block; padding: 10px 10px; color: #ffffff; font-weight: bold; font-family: Arial, sans-serif; font-size: 14px;">Organizations</span>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </a>
-                        </td>
-                    </tr>
-                </table>
+                <div style="margin: 15px 0 0 0; text-align: left; background-color: #f0f8ff; padding: 15px;">
+                    <h2 style="font-size: 18px; color: #444444; margin: 0 0 15px 0; text-align: center;">Quick Search</h2>
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto;">
+                        <tr>
+                            <td style="white-space: nowrap; text-align: center;">
+                                <a href="https://www.mygovtools.org/app/find-your-representatives" style="display: inline-block; text-decoration: none; margin-right: 10px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td style="background: #46a0ea; border-radius: 5px; text-align: center;">
+                                                <span style="display: block; padding: 10px 10px; color: #ffffff; font-weight: bold; font-family: Arial, sans-serif; font-size: 14px;">Representatives</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </a>
+                                <a href="https://www.mygovtools.org/app/organization-search" style="display: inline-block; text-decoration: none;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td style="background: #46a0ea; border-radius: 5px; text-align: center;">
+                                                <span style="display: block; padding: 10px 10px; color: #ffffff; font-weight: bold; font-family: Arial, sans-serif; font-size: 14px;">Organizations</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </td>
         </tr>
         <!-- Content -->
         <tr>
             <td align="center">
-                <table class="two-column" style="width: 600px;">
+                <table class="two-column">
                     <tr>
                         <!-- Events -->
-                        <td valign="top" style="width: 280px;">
+                        <td valign="top">
                             <div class="card">
                                 <h2>Upcoming Events</h2>
                                 <!-- Event Slots -->
@@ -223,7 +220,7 @@
                             </div>
                         </td>
                         <!-- News -->
-                        <td valign="top" style="width: 280px;">
+                        <td valign="top">
                             <div class="card">
                                 <h2>Recent News</h2>
                                 <!-- News Slots -->
