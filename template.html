@@ -67,8 +67,13 @@
             font-weight: 400;
             color: black;
         }
-        .event-item span, .news-item span {
+        .event-item span {
             color: #666666;
+            font-size: 12px;
+        }
+        .event-item .date {
+            font-style: italic;
+            font-size: 14px;
         }
         .news-item span.publisher {
             font-size: 12px;
@@ -99,6 +104,42 @@
             font-size: 18px;
             color: #444444;
             margin: 0 0 15px;
+        }
+        .quick-search {
+            margin: 15px 0 0 0;
+            text-align: left;
+            background-color: #f0f8ff;
+            padding: 15px;
+        }
+        .quick-search h2 {
+            font-size: 18px;
+            color: #444444;
+            margin: 0 0 15px 0;
+            text-align: center;
+        }
+        .quick-search-buttons {
+            margin: 0 auto;
+        }
+        .quick-search-button {
+            display: inline-block;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .quick-search-button:last-child {
+            margin-right: 0;
+        }
+        .quick-search-button td {
+            background: #46a0ea;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .quick-search-button span {
+            display: block;
+            padding: 10px 10px;
+            color: #ffffff;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
         }
         .card a.button {
             display: block;
@@ -144,33 +185,35 @@
                     <h2>District Updates for {{ district_label }}</h2>
                     <p>
                         <br>
-                        Stay informed easily with upcoming events and news just for you.  <br>
-                        I started building this growing toolset when I was a district director to help me,and I hope it helps you too.  
-                     - <i>Evan</i> 
-                     <br><br> How can this email be more helpful? What info or tools would make your day easier?
+                        Stay informed easily with upcoming events & news just for you.  <br>
+                        I started building this growing toolset when I was a district director to help me organize & localize information for my district, & I hope it helps you too. GovTools is where Contituent representation meets civic engagement. 
+                     
+                     <br><br> How can this email be more helpful? What info or tools would make your day easier?<br>
                      Just reply and let me know! 
-                     <br>
+                     <br><br>
+                     <i><b>County, City, Assembly, & Congressional, filters coming soon! </b></i><br><br>
+                     - <i>Evan</i> 
                     </p>
                 </div>
-                <div style="margin: 15px 0 0 0; text-align: left; background-color: #f0f8ff; padding: 15px;">
-                    <h2 style="font-size: 18px; color: #444444; margin: 0 0 15px 0; text-align: center;">Quick Search</h2>
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto;">
+                <div class="quick-search">
+                    <h2>Quick Search</h2>
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" class="quick-search-buttons">
                         <tr>
                             <td style="white-space: nowrap; text-align: center;">
-                                <a href="https://www.mygovtools.org/app/find-your-representatives" style="display: inline-block; text-decoration: none; margin-right: 10px;">
+                                <a href="https://www.mygovtools.org/app/find-your-representatives" class="quick-search-button">
                                     <table role="presentation" cellspacing="0" cellpadding="0" border="0">
                                         <tr>
-                                            <td style="background: #46a0ea; border-radius: 5px; text-align: center;">
-                                                <span style="display: block; padding: 10px 10px; color: #ffffff; font-weight: bold; font-family: Arial, sans-serif; font-size: 14px;">Representatives</span>
+                                            <td>
+                                                <span>Representatives</span>
                                             </td>
                                         </tr>
                                     </table>
                                 </a>
-                                <a href="https://www.mygovtools.org/app/organizations" style="display: inline-block; text-decoration: none;">
+                                <a href="https://www.mygovtools.org/app/organizations" class="quick-search-button">
                                     <table role="presentation" cellspacing="0" cellpadding="0" border="0">
                                         <tr>
-                                            <td style="background: #46a0ea; border-radius: 5px; text-align: center;">
-                                                <span style="display: block; padding: 10px 10px; color: #ffffff; font-weight: bold; font-family: Arial, sans-serif; font-size: 14px;">Organizations</span>
+                                            <td>
+                                                <span>Organizations</span>
                                             </td>
                                         </tr>
                                     </table>
@@ -189,30 +232,30 @@
                         <!-- Events -->
                         <td valign="top">
                             <div class="card">
-                                <h2>Upcoming Events</h2>
+                                <h2>Get Involved</h2>
                                 <!-- Event Slots -->
                                 <div class="event-item">
-                                    {{ event_1_date }}<br>
+                                    <span class="date">{{ event_1_date }}</span><br>
                                     <a href="{{ event_1_url }}">{{ event_1_title }}</a><br>
                                     <span>{{ event_1_source }}</span>
                                 </div>
                                 <div class="event-item">
-                                    {{ event_2_date }}<br>
+                                    <span class="date">{{ event_2_date }}</span><br>
                                     <a href="{{ event_2_url }}">{{ event_2_title }}</a><br>
                                     <span>{{ event_2_source }}</span>
                                 </div>
                                 <div class="event-item">
-                                    {{ event_3_date }}<br>
+                                    <span class="date">{{ event_3_date }}</span><br>
                                     <a href="{{ event_3_url }}">{{ event_3_title }}</a><br>
                                     <span>{{ event_3_source }}</span>
                                 </div>
                                 <div class="event-item">
-                                    {{ event_4_date }}<br>
+                                    <span class="date">{{ event_4_date }}</span><br>
                                     <a href="{{ event_4_url }}">{{ event_4_title }}</a><br>
                                     <span>{{ event_4_source }}</span>
                                 </div>
                                 <div class="event-item">
-                                    {{ event_5_date }}<br>
+                                    <span class="date">{{ event_5_date }}</span><br>
                                     <a href="{{ event_5_url }}">{{ event_5_title }}</a><br>
                                     <span>{{ event_5_source }}</span>
                                 </div>
@@ -222,7 +265,7 @@
                         <!-- News -->
                         <td valign="top">
                             <div class="card">
-                                <h2>Recent News</h2>
+                                <h2>Get Informed</h2>
                                 <!-- News Slots -->
                                 <div class="news-item">
                                     <a href="{{ news_1_url }}">
