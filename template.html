@@ -70,13 +70,16 @@
             color: #666666;
             text-align: left;
             position: relative;
-            padding-left: 25px;
+            padding-left: 30px;
         }
         .header ul li:before {
-            content: "💡";
+            content: "\2605";  /* Single star */
             position: absolute;
             left: 0;
             margin-right: 8px;
+            font-size: 18px;
+            color: #FFD700;  /* Gold color */
+            line-height: 1;
         }
 
         /* Event and News Styles */
@@ -94,7 +97,8 @@
         .news-item a {
             text-decoration: none;
             font-weight: 400;
-            color: black;
+            color: #666666;
+            font-size: 12px;
         }
         .event-item span {
             color: #666666;
