@@ -39,8 +39,16 @@
         .header img {
             display: flex;
         }
+        .header .tagline {
+            font-style: italic;
+            color: #E64645;
+            margin-top: 10px 0;
+            font-size: 16px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 0.5px;
+        }
         .header h2 {
-            margin: 10px 0 5px 0;
+            margin: 35px 0 5px 0;
             font-size: 24px;
             color: #333333;
         }
@@ -48,6 +56,27 @@
             margin: 0;
             font-size: 14px;
             color: #666666;
+        }
+        .header ul {
+            list-style: none;
+            padding-left: 30px;
+            margin: 10px auto;
+            text-align: left;
+            width: 90%;
+        }
+        .header ul li {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #666666;
+            text-align: left;
+            position: relative;
+            padding-left: 25px;
+        }
+        .header ul li:before {
+            content: "💡";
+            position: absolute;
+            left: 0;
+            margin-right: 8px;
         }
 
         /* Event and News Styles */
@@ -182,17 +211,16 @@
                 <!-- Header -->
                 <div class="header">
                     <img src="https://i.ibb.co/wM2qfb3/Gov-Tools-1.png"/>
+                    <div class="tagline">Where constituent representation meets civic engagement</div>
                     <h2>District Updates for {{ district_label }}</h2>
                     <p>
-                        <br>
-                        Stay informed easily with upcoming events & news just for you.  <br>
-                        I started building this growing toolset when I was a district director to help me organize & localize information for my district, & I hope it helps you too. GovTools is where Contituent representation meets civic engagement. 
-                     
-                     <br><br> How can this email be more helpful? What info or tools would make your day easier?<br>
-                     Just reply and let me know! 
-                     <br><br>
-                     <i><b>County, City, Assembly, & Congressional, filters coming soon! </b></i><br><br>
-                     - <i>Evan</i> 
+                        <ul>
+                            <li>Stay informed easily with upcoming events & news just for you.
+                            I started building this growing toolset as a district director to help me organize & localize information for my district. I hope it helps you too!</li>
+                            <li>Can these emails or tools be more helpful? Just reply and let me know!</li>
+                            <li><i><b>UPDATE: County, City, Assembly, & Congressional filters coming soon!</b></i></li>
+                        </ul>
+                        - <i>Evan</i> 
                     </p>
                 </div>
                 <div class="quick-search">
