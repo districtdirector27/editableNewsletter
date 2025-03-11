@@ -109,7 +109,7 @@
             font-style: italic;
             font-size: 14px;
         }
-        .news-item span.publisher {
+        .news-item span.publisher, .event-item span.publisher {
             font-size: 12px;
             color: #46a0ea;
             font-weight: bold;
@@ -220,10 +220,10 @@
                     <h2>District Updates for {{ district_label }}</h2>
                     <p>
                         <ul>
-                            <li>Upcoming events & news just for you.
-                             I started building this growing toolset as a district director to help me 
-                             organize & localize information for my district. I hope it helps you too!</li>
-                            <li>Can these emails or tools be more helpful? Just reply and let me know!</li>
+                            <li>Upcoming events & news just for you.</li>
+                            <li>I started building this growing toolset as a district director to help me 
+                                organize & localize information for my district. I hope it helps you too!
+                            Can it be more helpful? Just reply and let me know!</li>
                             <li><i><b>UPDATE: Welcoming our Assembly, Congress, County and City friends to GovTools! All data can now be filtered by any of these boundaries.</b></i></li>
                         </ul>
                         - <i>Evan</i> 
@@ -271,27 +271,27 @@
                                 <div class="event-item">
                                     <span class="date">{{ event_1_date }}</span><br>
                                     <a href="{{ event_1_url }}">{{ event_1_title }}</a><br>
-                                    <span>{{ event_1_source }}</span>
+                                    <span class="publisher">{{ event_1_source }}</span>
                                 </div>
                                 <div class="event-item">
                                     <span class="date">{{ event_2_date }}</span><br>
                                     <a href="{{ event_2_url }}">{{ event_2_title }}</a><br>
-                                    <span>{{ event_2_source }}</span>
+                                    <span class="publisher">{{ event_2_source }}</span>
                                 </div>
                                 <div class="event-item">
                                     <span class="date">{{ event_3_date }}</span><br>
                                     <a href="{{ event_3_url }}">{{ event_3_title }}</a><br>
-                                    <span>{{ event_3_source }}</span>
+                                    <span class="publisher">{{ event_3_source }}</span>
                                 </div>
                                 <div class="event-item">
                                     <span class="date">{{ event_4_date }}</span><br>
                                     <a href="{{ event_4_url }}">{{ event_4_title }}</a><br>
-                                    <span>{{ event_4_source }}</span>
+                                    <span class="publisher">{{ event_4_source }}</span>
                                 </div>
                                 <div class="event-item">
                                     <span class="date">{{ event_5_date }}</span><br>
                                     <a href="{{ event_5_url }}">{{ event_5_title }}</a><br>
-                                    <span>{{ event_5_source }}</span>
+                                    <span class="publisher">{{ event_5_source }}</span>
                                 </div>
                                 <a href="{{ events_url }}" class="button">View All Events</a>
                             </div>
