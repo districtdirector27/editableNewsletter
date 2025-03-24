@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>District Updates for {{ district_label }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td {
+            padding: 0;
+        }
+
+        /* Responsive adjustments */
+        @media only screen and (max-width: 600px) {
+            .two-column {
+                width: 100% !important;
+            }
+            .two-column td {
+                display: block;
+                width: 100% !important;
+            }
+        }
+
+        /* Header Styles */
+        .header {
+            color: #333333;
+            text-align: center;
+        }
+        .header img {
+            display: flex;
+        }
+        .header .tagline {
+            font-style: italic;
+            color: #E64645;
+            margin-top: 10px 0;
+            font-size: 16px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 0.5px;
+        }
+        .header h2 {
+            margin: 35px 0 5px 0;
+            font-size: 24px;
+            color: #333333;
+        }
+        .header p {
+            margin: 0;
+            font-size: 14px;
+            color: #666666;
+        }
+        .header ul {
+            list-style: none;
+            padding-left: 30px;
+            margin: 10px auto;
+            text-align: left;
+            width: 90%;
+        }
+        .header ul li {
+            margin: 15px 0;
+            font-size: 14px;
+            color: #666666;
+            text-align: left;
+            position: relative;
+            padding-left: 30px;
+        }
+        .header ul li:before {
+            content: "*";
+            position: absolute;
+            left: 0;
+            margin-right: 8px;
+            font-size: 30px;
+            color: #FFD700;  /* Gold color */
+            line-height: 1;
+            
+        }
+
+        /* Event and News Styles */
+        .event-item, .news-item {
+            margin: 0 0 10px;
+            border-left: 2px solid #D3D3D3;
+            padding-left: 10px;
+            color: black;
+        }
+        .event-item a {
+            text-decoration: none;
+            color: #46a0ea;
+            font-weight: bold;
+        }
+        .news-item a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #46a0ea;
+        }
+        .event-item span {
+            color: #666666;
+            font-size: 12px;
+        }
+        .event-item .date {
+            font-style: italic;
+            font-size: 14px;
+        }
+        .news-item span.publisher, .event-item span.publisher {
+            font-size: 12px;
+            color: #666666;
+            font-weight: normal;
+            text-decoration: none;
+        }
+        .event-source {
+            text-decoration: none;
+            font-weight: 400;
+            color: #666666;
+            font-size: 12px;
+        }
+
+        /* Content Styles */
+        .content {
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            width: 600px;
+            margin: 0 auto;
+        }
+        .two-column td {
+            width: 300px;
+            padding: 20px;
+        }
+        .card {
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid #D3D3D3;
+        }
+        .card h2 {
+            font-size: 18px;
+            color: #444444;
+            margin: 0 0 15px;
+        }
+        .quick-search {
+            margin: 15px 0 0 0;
+            text-align: left;
+            background-color: #f0f8ff;
+            padding: 15px;
+        }
+        .quick-search h2 {
+            font-size: 18px;
+            color: #444444;
+            margin: 0 0 15px 0;
+            text-align: center;
+        }
+        .quick-search-buttons {
+            margin: 0 auto;
+        }
+        .quick-search-button {
+            display: inline-block;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .quick-search-button:last-child {
+            margin-right: 0;
+        }
+        .quick-search-button td {
+            background: #46a0ea;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .quick-search-button span {
+            display: block;
+            padding: 10px 10px;
+            color: #ffffff;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        .card a.button {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            background: #46a0ea;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Footer Styles */
+        .footer {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #666666;
+            text-align: center;
+        }
+        .footer a {
+            color: #46a0ea;
+            text-decoration: none;
+        }
+        .footer p {
+            margin: 0 0 10px 0;
+        }
+
+        /* Consistent Font Styles */
+        .consistent-font {
+            font-size: 14px;
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+    <table class="content">
+        <tr>
+            <td align="center">
+                <!-- Header -->
+                <div class="header">
+                    <!-- <img src="https://i.ibb.co/wM2qfb3/Gov-Tools-1.png"/> -->
+                    <div class="tagline">Where constituent representation meets civic engagement</div>
+                    <h2>District Updates for {{ district_label }}</h2>
+                    <p style="text-align: left; margin-bottom: 20px; padding: 0 15px;">Hello, Santa Monica! Here are a few things I've been working on this week:</p>
+                    <ul>
+                    
+                        <li>I've been collaborating with Assembly Member Zbur's office to address our signage and traffic concerns with Caltrans. They've updated the signage, which should help improve safety and clarity on our roads.</li>
+                        <li>The decommissioning of the Will Rogers Beach staging site will be completed by next week.</li>
+                        <li>On Monday, I walked the pier with the Pier Corporation to assess necessary repairs and discuss pier deck usage. I also met with Harbor Patrol to discuss how water quality impacts their operations. The new PA system, which enables them to quickly announce closures and emergencies, including connecting lost children with their guardians, is finally installed.</li>
+                        <li>I noticed an individual encampment on the north side where the HLP team quickly addressed it.</li>
+                        <li>I had the privilege of attending the League of Women Voters Yellow Rose Ceremony, where I presented four commendations to outstanding leaders in our community.</li>
+                        <li>Additionally, I've been working closely with businesses in the Wilshire and Ocean Park area to overcome challenges around parking availability and bike lane cleaning—thank you to RRR for your ongoing support!</li>
+                        <li>I attended the PTA Council meeting and shared the history of our city's relationship with local schools, along with insights into our budget with all PTA presidents.</li>
+                        <li>Thursday, I enjoyed Local's Night at the pier and visited local businesses throughout the city—our community truly thrives with your support!</li>
+                        <li>Tomorrow, I'll be at the Wellness Walk on Montana from 10 AM to 5 PM, and Sunday, I'm excited to visit my favorite Farmers Market on Main Street!</li>
+                        <li>I've partnered with mygovtools.org who helps cities organize and localize civic information. I'm passionate about bringing civic education and increased engagement opportunities to you all so you're voices can be heard on the issues you care about most.</li>
+                        <li>Lastly, I'm pleased to announce that Santa Monica is easing regulations to help boost local businesses in anticipation of March Madness. We're committed to supporting our economic recovery following the impact of the January wildfires.</li>
+                    </ul>
+                    <p style="text-align: left; margin-bottom: 20px; padding: 0 15px;">
+                        Our continued collaboration highlights our collective strength as a community. I'm especially passionate about ensuring our public spaces are clean, safe, and welcoming for everyone. Whether it's improving road signage, enhancing water quality at the pier, or swiftly addressing encampments, these efforts contribute significantly to the well-being and safety of all residents and visitors.
+                    </p>
+                    <p style="text-align: left; margin-bottom: 20px; padding: 0 15px;">
+                        Education remains at the heart of our city's future. It was an honor to connect with local PTA presidents and discuss how we can further support our schools. Our children deserve the best educational environment possible, and I'll continue advocating for resources that benefit both students and educators alike.
+                    </p>
+                    <p style="text-align: left; margin-bottom: 20px; padding: 0 15px;">
+                        Supporting local businesses remains a critical focus. I'm deeply committed to helping our small businesses thrive, whether by easing regulations, addressing infrastructure challenges, or fostering vibrant community events. Together, we ensure Santa Monica remains an inviting, dynamic city for everyone.
+                    </p>
+                    <p style="text-align: left; padding: 0 15px;">
+                        Let's continue to work together, Santa Monica!
+                    </p>
+                </div>
+                <div class="quick-search">
+                    <h2>Quick Search</h2>
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" class="quick-search-buttons">
+                        <tr>
+                            <td style="white-space: nowrap; text-align: center;">
+                                <a href="https://www.mygovtools.org/app/find-your-representatives" class="quick-search-button">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td>
+                                                <span>Representatives</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </a>
+                                <a href="https://www.mygovtools.org/app/organizations" class="quick-search-button">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td>
+                                                <span>Organizations</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <!-- Content -->
+        <tr>
+            <td align="center">
+                <table class="two-column">
+                    <tr>
+                        <!-- Events -->
+                        <td valign="top">
+                            <div class="card">
+                                <h2>Get Involved</h2>
+                                <!-- Event Slots -->
+                                <div class="event-item">
+                                    <span class="date">{{ event_1_date }}</span><br>
+                                    <a class="event-name" href="{{ event_1_url }}">{{ event_1_title }}</a><br>
+                                    <span class="event-source">{{ event_1_source }}</span>
+                                </div>
+                                <div class="event-item">
+                                    <span class="date">{{ event_2_date }}</span><br>
+                                    <a class="event-name" href="{{ event_2_url }}">{{ event_2_title }}</a><br>
+                                    <span class="event-source">{{ event_2_source }}</span>
+                                </div>
+                                <div class="event-item">
+                                    <span class="date">{{ event_3_date }}</span><br>
+                                    <a class="event-name" href="{{ event_3_url }}">{{ event_3_title }}</a><br>
+                                    <span class="event-source">{{ event_3_source }}</span>
+                                </div>
+                                <div class="event-item">
+                                    <span class="date">{{ event_4_date }}</span><br>
+                                    <a class="event-name" href="{{ event_4_url }}">{{ event_4_title }}</a><br>
+                                    <span class="event-source">{{ event_4_source }}</span>
+                                </div>
+                                <div class="event-item">
+                                    <span class="date">{{ event_5_date }}</span><br>
+                                    <a class="event-name" href="{{ event_5_url }}">{{ event_5_title }}</a><br>
+                                    <span class="event-source">{{ event_5_source }}</span>
+                                </div>
+                                <a href="{{ events_url }}" class="button">View All Events</a>
+                            </div>
+                        </td>
+                        <!-- News -->
+                        <td valign="top">
+                            <div class="card">
+                                <h2>Get Informed</h2>
+                                <!-- News Slots -->
+                                <div class="news-item">
+                                    <a href="{{ news_1_url }}">
+                                        {{ news_1_title }}</a><br>
+                                        <span class="publisher">- {{ news_1_publisher }}</span>
+                                    </a>
+                                </div>
+                                <div class="news-item">
+                                    <a href="{{ news_2_url }}">
+                                        {{ news_2_title }}</a><br>
+                                        <span class="publisher">- {{ news_2_publisher }}</span>
+                                    </a>
+                                </div>
+                                <div class="news-item">
+                                    <a href="{{ news_3_url }}">
+                                        {{ news_3_title }}</a><br>
+                                        <span class="publisher">- {{ news_3_publisher }}</span>
+                                    
+                                </div>
+                                <div class="news-item">
+                                    <a href="{{ news_4_url }}">
+                                        {{ news_4_title }}</a><br>
+                                        <span class="publisher">- {{ news_4_publisher }}</span>
+                                    </a>
+                                </div>
+                                <div class="news-item">
+                                    <a href="{{ news_5_url }}">
+                                        {{ news_5_title }}</a><br>
+                                        <span class="publisher">- {{ news_5_publisher }}</span>
+                                    </a>
+                                </div>
+                                <a href="{{ news_url }}" class="button">View All News</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- Footer -->
+        <tr>
+            <td align="center" class="footer">
+                <p>
+                    For inquiries, suggestions, requests, or feedback, please contact us at 
+                    <a href="mailto:evan@mygovtools.org">evan@mygovtools.org</a> or 
+                    <a href="https://www.mygovtools.org">MyGovTools.org</a>.
+                </p>
+                <p>
+                    &copy; {{ current_year }} MyGovTools.org. All rights reserved.
+                </p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
