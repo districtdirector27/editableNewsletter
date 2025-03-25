@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>District Updates for {{ district_label }}</title>
+    <title>Lana Negrete Newsletter - Updates for {{ district_label }}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -35,17 +35,28 @@
         .header {
             color: #333333;
             text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #e6e6e6;
+            margin-bottom: 15px;
         }
         .header img {
             display: flex;
+            max-width: 150px;
+            margin: 0 auto 15px;
         }
         .header .tagline {
             font-style: italic;
             color: #E64645;
-            margin-top: 10px 0;
+            margin: 10px 0 15px;
             font-size: 16px;
             font-family: Georgia, 'Times New Roman', Times, serif;
             letter-spacing: 0.5px;
+            padding: 5px 0;
+            border-bottom: 1px dotted #ccc;
+            border-top: 1px dotted #ccc;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
         }
         .header h2 {
             margin: 35px 0 20px 0;
@@ -62,17 +73,25 @@
         .header ul {
             list-style: none;
             padding-left: 15px;
-            margin: 10px auto;
+            margin: 15px auto;
             text-align: left;
             width: 90%;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
         .header ul li {
             margin: 20px 0;
             font-size: 14px;
-            color: #666666;
+            color: #555555;
             text-align: left;
             position: relative;
             padding-left: 30px;
+            border-bottom: 1px dashed #f0f0f0;
+            padding-bottom: 15px;
+        }
+        .header ul li:last-child {
+            border-bottom: none;
         }
         .header ul li:before {
             content: "*";
@@ -80,9 +99,41 @@
             left: 0;
             margin-right: 8px;
             font-size: 30px;
-            color: #FFD700;  /* Gold color */
+            color: #E64645;
             line-height: 1;
-            
+        }
+        .header a {
+            color: #46a0ea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        .header a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        .header .intro {
+            margin-bottom: 15px;
+            border-left: 3px solid #E64645;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #f9f9f9;
+            padding: 5px 10px;
+        }
+        .header .intro p {
+            margin: 10px 0;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 15px;
+        }
+        .header .conclusion {
+            margin-top: 25px;
+            border-top: 1px solid #e6e6e6;
+            padding-top: 15px;
+            max-width: 92%;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Event and News Styles */
@@ -222,36 +273,55 @@
             <td align="center">
                 <!-- Header -->
                 <div class="header">
-                    <!-- <img src="https://i.ibb.co/wM2qfb3/Gov-Tools-1.png"/> -->
+                    <img src="https://drive.google.com/uc?export=view&id=1HRXhu6BVh1XO3qd60XJudDu5WwNmnoqr" alt="Lana Negrete" style="max-width: 350px; border-radius: 5px; margin: 0 auto 15px; display: block;"/>
                     <div class="tagline">Where constituent representation meets civic engagement</div>
-                    <h2>District Updates for {{ district_label }}</h2>
-                    <p>Hello, Santa Monica! Here are a few things I've been working on this week:</p>
+                    <h2>Lana Negrete <br> {{ district_label }} Action & Accountability Update</h2>
+                    <div class="intro">
+                        <p>Hello, {{ district_label }}! Here are a few things I've been working on this week:</p>
+                    </div>
+                    <h2>Safety</h2>
                     <ul>
-                    
-                        <li>I've been collaborating with Assembly Member Zbur's office to address our signage and traffic concerns with Caltrans. They've updated the signage, which should help improve safety and clarity on our roads.</li>
-                        <li>The decommissioning of the Will Rogers Beach staging site will be completed by next week.</li>
-                        <li>On Monday, I walked the pier with the Pier Corporation to assess necessary repairs and discuss pier deck usage. I also met with Harbor Patrol to discuss how water quality impacts their operations. The new PA system, which enables them to quickly announce closures and emergencies, including connecting lost children with their guardians, is finally installed.</li>
-                        <li>I noticed an individual encampment on the north side where the HLP team quickly addressed it.</li>
-                        <li>I had the privilege of attending the League of Women Voters Yellow Rose Ceremony, where I presented four commendations to outstanding leaders in our community.</li>
-                        <li>Additionally, I've been working closely with businesses in the Wilshire and Ocean Park area to overcome challenges around parking availability and bike lane cleaning—thank you to RRR for your ongoing support!</li>
-                        <li>I attended the PTA Council meeting and shared the history of our city's relationship with local schools, along with insights into our budget with all PTA presidents.</li>
-                        <li>Thursday, I enjoyed Local's Night at the pier and visited local businesses throughout the city—our community truly thrives with your support!</li>
-                        <li>Tomorrow, I'll be at the Wellness Walk on Montana from 10 AM to 5 PM, and Sunday, I'm excited to visit my favorite Farmers Market on Main Street!</li>
-                        <li>I've partnered with mygovtools.org who helps cities organize and localize civic information. I'm passionate about bringing civic education and increased engagement opportunities to you all so you're voices can be heard on the issues you care about most.</li>
-                        <li>Lastly, I'm pleased to announce that Santa Monica is easing regulations to help boost local businesses in anticipation of March Madness. We're committed to supporting our economic recovery following the impact of the January wildfires.</li>
+                        <li>Collaborating with Assembly Member Zbur's office to address our signage and traffic concerns with Caltrans. They've updated the signage, which should help improve safety and clarity on our roads.</li>
+                        <li>Walked the pier with the Pier Corporation to assess necessary repairs and discuss pier deck usage. Also, met with Harbor Patrol to discuss how water quality impacts their operations. The new PA system, which enables them to quickly announce closures and emergencies, including connecting lost children with their guardians, is finally installed.</li>
+                        <li>Noticed an individual encampment on the north side where the HLP team quickly addressed it.</li>
+                      </ul> 
+                      <h2>Economy</h2> 
+                      <ul>  
+                         <li>Santa Monica is easing regulations to help boost local businesses in anticipation of March Madness. We're committed to supporting our economic recovery following the impact of the January wildfires.</li>
+                         <li>Working closely with businesses in the Wilshire and Ocean Park area to overcome challenges around parking availability and bike lane cleaning—thank you to RRR for your ongoing support!</li>
+                         <li>Attended Local's Night at the pier and visited local businesses throughout the city—our community truly thrives with your support! Here are a <a href="https://www.instagram.com/p/DHgxcuSSXKk/" target="_blank">few business</a> I love</li>
+                      </ul>
+                      <h2>Education</h2> 
+                      <ul>
+                        <li>Attended the PTA Council meeting and shared the history of our city's relationship with local schools, along with insights into our budget with all PTA presidents.</li>
+                      </ul>
+                      <h2>Community</h2> 
+                      <ul>    
+                        <li>Partnered with mygovtools.org who helps cities organize and localize civic information. I'm passionate about bringing civic education and increased engagement opportunities to you all so you're voices can be heard on the issues you care about most.</li>
+                        <li>Attended the <a href="https://www.instagram.com/lananegretesantamonica/" target="_blank">Wellness Walk</a> on Montana from 10 AM to 5 PM, and Sunday, I'm excited to visit my favorite Farmers Market on Main Street!</li>
+                        <li>Attending the League of Women Voters Yellow Rose Ceremony. Presented four commendations to outstanding leaders in our community.</li>    
+                        <li>Decommissioning of the Will Rogers Beach staging site will be completed by next week.</li>
                     </ul>
-                    <p>
-                        Our continued collaboration highlights our collective strength as a community. I'm especially passionate about ensuring our public spaces are clean, safe, and welcoming for everyone. Whether it's improving road signage, enhancing water quality at the pier, or swiftly addressing encampments, these efforts contribute significantly to the well-being and safety of all residents and visitors.
-                    </p>
-                    <p>
-                        Education remains at the heart of our city's future. It was an honor to connect with local PTA presidents and discuss how we can further support our schools. Our children deserve the best educational environment possible, and I'll continue advocating for resources that benefit both students and educators alike.
-                    </p>
-                    <p>
-                        Supporting local businesses remains a critical focus. I'm deeply committed to helping our small businesses thrive, whether by easing regulations, addressing infrastructure challenges, or fostering vibrant community events. Together, we ensure Santa Monica remains an inviting, dynamic city for everyone.
-                    </p>
-                    <p>
-                        Let's continue to work together, Santa Monica!
-                    </p>
+                    </ul>
+
+
+
+
+
+                    <div class="conclusion">
+                        <p>
+                            Our continued collaboration highlights our collective strength as a community. I'm especially passionate about ensuring our public spaces are clean, safe, and welcoming for everyone. Whether it's improving road signage, enhancing water quality at the pier, or swiftly addressing encampments, these efforts contribute significantly to the well-being and safety of all residents and visitors.
+                        </p>
+                        <p>
+                            Education remains at the heart of our city's future. It was an honor to connect with local PTA presidents and discuss how we can further support our schools. Our children deserve the best educational environment possible, and I'll continue advocating for resources that benefit both students and educators alike.
+                        </p>
+                        <p>
+                            Supporting local businesses remains a critical focus. I'm deeply committed to helping our small businesses thrive, whether by easing regulations, addressing infrastructure challenges, or fostering vibrant community events. Together, we ensure Santa Monica remains an inviting, dynamic city for everyone.
+                        </p>
+                        <p>
+                            Let's continue to work together, Santa Monica!
+                        </p>
+                    </div>
                 </div>
                 <div class="quick-search">
                     <h2>Quick Search</h2>
