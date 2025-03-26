@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lana Negrete Newsletter - Updates for {{ district_label }}</title>
+    <title>Mayor Lana Negrete Newsletter - Updates for {{ district_label }}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -35,14 +35,15 @@
         .header {
             color: #333333;
             text-align: center;
-            padding: 20px 0;
+            padding: 0 0 20px 0;
             border-bottom: 2px solid #e6e6e6;
             margin-bottom: 15px;
+            border-top: none;
         }
         .header img {
             display: flex;
             max-width: 150px;
-            margin: 0 auto 15px;
+            margin: 0;
         }
         .header .tagline {
             font-style: italic;
@@ -198,34 +199,51 @@
             margin: 0 0 15px;
         }
         .quick-search {
-            margin: 15px 0 0 0;
-            text-align: left;
-            background-color: #f0f8ff;
+            margin: 20px 0;
             padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
         }
         .quick-search h2 {
-            font-size: 18px;
-            color: #444444;
-            margin: 0 0 15px 0;
+            color: #333333;
+            margin-bottom: 10px;
             text-align: center;
         }
+        .resource-intro {
+            text-align: center;
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
         .quick-search-buttons {
+            width: 100%;
             margin: 0 auto;
         }
         .quick-search-button {
             display: inline-block;
+            padding: 10px 15px;
+            margin: 5px;
+            background-color: #46a0ea;
+            color: #ffffff;
             text-decoration: none;
-            margin-right: 10px;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
         }
-        .quick-search-button:last-child {
-            margin-right: 0;
+        .quick-search-button:hover {
+            background-color: #2980b9;
+        }
+        .quick-search-button span {
+            color: #ffffff;
         }
         .quick-search-button td {
             background: #46a0ea;
             border-radius: 5px;
             text-align: center;
         }
-        .quick-search-button span {
+        .quick-search-button td span {
             display: block;
             padding: 10px 10px;
             color: #ffffff;
@@ -247,17 +265,36 @@
 
         /* Footer Styles */
         .footer {
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            color: #666666;
-            text-align: center;
-        }
-        .footer a {
-            color: #46a0ea;
-            text-decoration: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #e6e6e6;
         }
         .footer p {
-            margin: 0 0 10px 0;
+            font-size: 12px;
+            color: #777777;
+            margin: 10px 0;
+        }
+        .social-links {
+            margin: 15px 0;
+            text-align: center;
+        }
+        .social-link {
+            display: inline-block;
+            margin: 0 10px;
+            color: #46a0ea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .social-link:hover {
+            text-decoration: underline;
+        }
+        .footer-tagline {
+            font-style: italic;
+            color: #999;
+            font-size: 11px;
+            margin-top: 15px;
+            text-align: center;
         }
 
         /* Consistent Font Styles */
@@ -275,8 +312,7 @@
                 <div class="header">
                     <img src="https://i.ibb.co/G4ckpVpq/Screenshot-2025-03-26-104429.png" 
                     alt="Lana Negrete" style="max-width: 600px; border-radius: 5px; margin: 0 auto 15px; display: block;" />
-                    <div class="tagline">Where constituent representation meets civic engagement</div>
-                    <h2>Mayor Lana Negrete <br> <i>{{ district_label }}Action & Accountability Update</i> </h2>
+                    <h2>Mayor Lana Negrete <br><i> {{ district_label }} Action & Accountability Update</i> </h2>
                     <div class="intro">
                         <p>Hello, {{ district_label }}! As your mayor, I want you to know I am here to help you, listen, and drive the change you voted for. I value action, accountability and transparency,
                             so I want you to know what I'm working on and toward what goals. Here are a few items from last week:</p>
@@ -323,7 +359,8 @@
                     </div>
                 </div>
                 <div class="quick-search">
-                    <h2>Quick Search</h2>
+                    <h2>Santa Monica Civic Resources</h2>
+                    <p class="resource-intro">Access these digital tools to stay informed and engaged with your local government:</p>
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" class="quick-search-buttons">
                         <tr>
                             <td style="white-space: nowrap; text-align: center;">
@@ -429,6 +466,7 @@
                         </td>
                     </tr>
                 </table>
+                
             </td>
         </tr>
         <!-- Footer -->
@@ -439,7 +477,12 @@
                     <a href="mailto:evan@mygovtools.org">evan@mygovtools.org</a> or 
                     <a href="https://www.mygovtools.org">MyGovTools.org</a>.
                 </p>
-                <p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/MyGovTools" class="social-link">Facebook</a>
+                    <a href="https://twitter.com/MyGovTools" class="social-link">Twitter</a>
+                    <a href="https://www.instagram.com/MyGovTools" class="social-link">Instagram</a>
+                </div>
+                <p class="footer-tagline">
                     &copy; {{ current_year }} MyGovTools.org. All rights reserved.
                 </p>
             </td>
