@@ -315,8 +315,8 @@
         }
         .card {
             background-color: #ffffff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 80px;
             padding: 20px;
             border: 1px solid #D3D3D3;
         }
@@ -545,82 +545,21 @@
 
                 <!-- GovTools-->
                 <h2 style="text-align: center; color: #46a0ea; margin: 25px 0 15px 0;">GovTools Resources</h2>
+                <p style="text-align:center; color:#666; font-size:15px; margin: 0 0 16px 0;">Newsletter powered by GovTools, providing tools and resources for constituent representation and civic engagement. </p>
                 <table class="two-column">
                     <tr>
-                        <!-- Events -->
-                        <td valign="top">
-                            <div class="card">
-                                <h2>Get Involved</h2>
-                                <!-- Event Slots -->
-                                
-                                <div class="event-item">
-                                    <span class="date">{{ event_1_date }}</span><br>
-                                    <a class="event-name" href="{{ event_1_url }}">{{ event_1_title }}</a><br>
-                                    <span class="event-source">{{ event_1_source }}</span>
-                                </div>
-                                <div class="event-item">
-                                    <span class="date">{{ event_2_date }}</span><br>
-                                    <a class="event-name" href="{{ event_2_url }}">{{ event_2_title }}</a><br>
-                                    <span class="event-source">{{ event_2_source }}</span>
-                                </div>
-                                <div class="event-item">
-                                    <span class="date">{{ event_3_date }}</span><br>
-                                    <a class="event-name" href="{{ event_3_url }}">{{ event_3_title }}</a><br>
-                                    <span class="event-source">{{ event_3_source }}</span>
-                                </div>
-                                <div class="event-item">
-                                    <span class="date">{{ event_4_date }}</span><br>
-                                    <a class="event-name" href="{{ event_4_url }}">{{ event_4_title }}</a><br>
-                                    <span class="event-source">{{ event_4_source }}</span>
-                                </div>
-                                <div class="event-item">
-                                    <span class="date">{{ event_5_date }}</span><br>
-                                    <a class="event-name" href="{{ event_5_url }}">{{ event_5_title }}</a><br>
-                                    <span class="event-source">{{ event_5_source }}</span>
-                                </div>
+                        <!-- Events -->  <td valign="top">
+                            <div class="card" style="border:none;">
+                       
                         
-                                <a href="{{ events_url }}" class="button">View All Events</a>
+                                <a href="{{ events_url }}" class="button">View Civic Events in Santa Monica</a>
                             </div>
                         </td>
-                        <!-- News -->
-                        <td valign="top">
-                            <div class="card">
-                                <h2>Get Informed</h2>
-                                <!-- News Slots -->
-                                <div class="news-item">
-                                    <a href="{{ news_1_url }}">
-                                        {{ news_1_title }}</a><br>
-                                        <span class="publisher">- {{ news_1_publisher }}</span>
-                                    </a>
-                                </div>
-                               
-                                <div class="news-item">
-                                    <a href="{{ news_4_url }}">
-                                        {{ news_4_title }}</a><br>
-                                        <span class="publisher">- {{ news_4_publisher }}</span>
-                                    </a>
-                                </div>
-                                <div class="news-item">
-                                    <a href="{{ news_5_url }}">
-                                        {{ news_5_title }}</a><br>
-                                        <span class="publisher">- {{ news_5_publisher }}</span>
-                                    </a>
-                                </div>
-                                <div class="news-item">
-                                    <a href="{{ news_6_url }}">
-                                        {{ news_6_title }}</a><br>
-                                        <span class="publisher">- {{ news_6_publisher }}</span>
-                                    </a>
-                                </div>
-                                <div class="news-item">
-                                    <a href="{{ news_7_url }}">
-                                        {{ news_7_title }}</a><br>
-                                        <span class="publisher">- {{ news_7_publisher }}</span>
-                                    </a>
-                                </div>
+                        <!-- News -->  <td valign="top">
+                            <div class="card" style="border:none;">
+                       
 
-
-                                <a href="{{ news_url }}" class="button">View All News</a>
+                                <a href="{{ news_url }}" class="button">View News in Santa Monica</a>
                             </div>
                         </td>
                     </tr>
