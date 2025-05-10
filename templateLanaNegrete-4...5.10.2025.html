@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mayor Lana Negrete Newsletter - Updates for Santa Monica</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--[if mso]>
+    <noscript>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+    </noscript>
+    <![endif]-->
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+        .header h2 {
+            color: #46a0ea !important;
+        }
+        h2 {
+            color: #46a0ea !important;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td {
+            padding: 0;
+        }
+
+        /* Responsive adjustments */
+        @media only screen and (max-width: 600px) {
+            .two-column {
+                width: 100% !important;
+            }
+            .two-column td {
+                display: block;
+                width: 100% !important;
+            }
+        }
+
+        /* Header Styles */
+        .header {
+            color: #333333;
+            text-align: center;
+            padding: 0 0 20px 0;
+            border-bottom: 0px solid #e6e6e6;
+            margin-bottom: 15px;
+            border-top: none;
+        }
+        .header-logo {
+            max-width: 600px;
+            border-radius: 5px;
+            margin: 0 auto 15px;
+            display: block;
+        }
+        .header .tagline {
+            font-style: italic;
+            color: #E64645;
+            margin: 10px 0 15px;
+            font-size: 16px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 0.5px;
+            padding: 5px 0;
+            border-bottom: 1px dotted #ccc;
+            border-top: 1px dotted #ccc;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .header h2 {
+            margin: 35px 0 20px 0;
+            font-size: 24px;
+            color: #333333;
+        }
+        .title-subtitle {
+            font-size: 0.85em;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        
+        /* Content Section Styles */
+        .section {
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        .section-blue {
+            background-color: #f5f9fd;
+            padding: 20px 20px 20px 20px;
+        }
+        .section-white {
+            padding: 0px 20px 0px 20px;
+        }
+        .section h3 {
+            color: #2980b9;
+            text-align: left;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        .section h2 {
+            color: #2c3e50;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        .section p {
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+        .section p.mb-15 {
+            margin-bottom: 15px;
+        }
+        
+        /* List Styles */
+        .section ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        .section li {
+            margin-bottom: 12px;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        .section li:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Social Links Styles */
+        .social-links {
+            margin: 0px auto;
+            border-bottom: 1px solid #e6e6e6;
+            padding: 20px 0 25px 0;
+            background-color: #f9fbfe;
+            border-radius: 5px;
+            max-width: 600px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .social-heading {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: #46a0ea;
+            font-weight: 600;
+        }
+        .social-table {
+            margin: 0 auto;
+            width: 100%;
+            table-layout: fixed;
+        }
+        .social-cell {
+            width: 25%;
+            text-align: center;
+            padding: 0 15px;
+        }
+        .social-link {
+            display: inline-block;
+            text-decoration: none;
+        }
+        .social-button {
+            padding: 8px 15px;
+            background-color: white;
+            border-radius: 5px;
+            text-align: center;
+            border: 1px solid #46a0ea;
+            width: 42px;
+            display: inline-block;
+        }
+        .social-icon {
+            vertical-align: middle;
+            width: 20px;
+        }
+        .subscribe-button {
+            padding: 8px 15px;
+            background-color: white;
+            border-radius: 5px;
+            text-align: center;
+            border: 1px solid #46a0ea;
+            width: 100px;
+            display: inline-block;
+            white-space: nowrap;
+        }
+        .subscribe-icon {
+            vertical-align: middle;
+            width: 20px;
+            margin-right: 8px;
+        }
+        .subscribe-text {
+            color: #46a0ea;
+            font-weight: bold;
+            font-size: 13px;
+            vertical-align: middle;
+        }
+        
+        /* Section Headings */
+        .section-heading {
+            color: #2980b9;
+            text-align: left;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        .section-heading-large {
+            color: #2c3e50;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-size: 20px;
+        }
+        
+        /* Lists */
+        .section-list {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        .section-list-item {
+            margin-bottom: 12px;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+        .section-list-item-last {
+            margin-bottom: 0;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+        
+        /* Links */
+        .content-link {
+            color: #46a0ea;
+            text-decoration: underline;
+        }
+        
+        /* Dividers */
+        .content-divider {
+            border: 0;
+            border-top: 0px solid #e6e6e6;
+            margin: 30px 0;
+        }
+        
+        /* Horizontal Rule */
+        hr {
+            margin: 30px 0;
+            border: 0;
+            border-top: 1px solid #e6e6e6;
+        }
+        
+        /* Footer Styles */
+        .footer {
+            text-align: center;
+            color: #666666;
+            font-size: 12px;
+            padding: 20px;
+        }
+        
+        /* Event and News Styles */
+        .event-item, .news-item {
+            margin: 0 0 10px;
+            border-left: 2px solid #D3D3D3;
+            padding-left: 10px;
+            color: black;
+        }
+        .event-item a {
+            text-decoration: none;
+            color: #46a0ea;
+            font-weight: bold;
+        }
+        .news-item a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #46a0ea;
+        }
+        .event-item span {
+            color: #666666;
+            font-size: 12px;
+        }
+        .event-item .date {
+            font-style: italic;
+            font-size: 14px;
+        }
+        .news-item span.publisher, .event-item span.publisher {
+            font-size: 12px;
+            color: #666666;
+            font-weight: normal;
+            text-decoration: none;
+        }
+        .event-source {
+            text-decoration: none;
+            font-weight: 400;
+            color: #666666;
+            font-size: 12px;
+        }
+
+        /* Content Styles */
+        .content {
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            width: 600px;
+            margin: 0 auto;
+        }
+        .two-column {
+            width: 100%;
+            max-width: 600px;
+        }
+        .two-column td {
+            width: 300px;
+            padding: 20px;
+        }
+        .card {
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid #D3D3D3;
+        }
+        .card h2 {
+            font-size: 18px;
+            color: #444444;
+            margin: 0 0 15px;
+        }
+        .quick-search {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .quick-search h2 {
+            color: #333333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .resource-intro {
+            text-align: center;
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        .quick-search-buttons {
+            width: 100%;
+            margin: 0 auto;
+        }
+        .quick-search-button {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 5px;
+            background-color: #46a0ea;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+        .quick-search-button:hover {
+            background-color: #2980b9;
+        }
+        .quick-search-button span {
+            color: #ffffff;
+        }
+        .quick-search-button td {
+            background: #46a0ea;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .quick-search-button td span {
+            display: block;
+            padding: 10px 10px;
+            color: #ffffff;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        .card a.button {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            background: #46a0ea;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Consistent Font Styles */
+        .consistent-font {
+            font-size: 14px;
+            color: #666666;
+        }
+
+        /* Main Content Container */
+        .main-content {
+            text-align: left;
+            padding: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+      Mayor Lana Negrete's latest updates on homelessness funding, PCH resilience planning, and upcoming city initiatives
+    </div>
+    <!-- Hidden preheader text -->
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+      &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <table class="content">
+        <tr>
+            <td align="center">
+                <!-- EMAIL TRACKING PIXEL - Replace with your email service provider's tracking code -->
+                <img src="https://example.com/tracking-pixel.gif" width="1" height="1" style="display:none;">
+                <!-- Header -->
+                <div class="header">
+                    <img src="https://storage.googleapis.com/cdn-assets-mygovtools/Screenshot%202025-03-26%20104429.png" 
+                    alt="Lana Negrete" class="header-logo" />
+                    <h2 class="social-heading">Mayor Lana Negrete <br><i class="title-subtitle"> Santa Monica Action & Accountability Update</i> </h2>
+             
+
+  <div class="main-content">
+    <div class="section section-white">
+      <p>Dear Neighbors,</p>
+      <p>We’re deep into spring and there’s a lot happening across Santa Monica. I wanted to take a moment to personally share updates on what I’ve been working on—your safety, our economic vitality, and how we tackle homelessness remain front and center. I’m committed to being transparent with you about how the city is operating, where the tough decisions are being made, and how we can work together to make Santa Monica a place we all thrive in.</p>
+      <hr>
+    </div>
+    <div class="section section-white">
+      <h2>Public Safety &amp; the Budget: A Transparent Look</h2>
+      <p>Our mid-year budget conversation is back on the table. This council unanimously decided to focus our efforts on just three priorities: Clean and Safe, economic recovery, and homelessness and affordable living. We did this so we can be more effective and direct our resources where they’re needed most.</p>
+      <p><strong>Here’s a breakdown of where our budget currently goes:</strong></p>
+      <div style="text-align:center; margin: 18px 0;">
+        <img src="https://storage.googleapis.com/cdn-assets-mygovtools/Lana_Budget_Web_Optimized.png" alt="Santa Monica Budget Breakdown" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(70,160,234,0.08);">
+      </div>
+      <p>We are not operating from a place of surplus. We’re dipping into reserves to keep things afloat, which makes every spending decision even more consequential. And yes, labor negotiations are active and emotional—particularly with our public safety departments. I’ve spent a lot of time working to build bridges and ensure all voices are heard while protecting the city’s long-term fiscal health.</p>
+      <p><em>Let me know: Do you believe this budget reflects your priorities? Reply to this email and share your thoughts.</em></p>
+      <hr>
+    </div>
+    <div class="section section-white">
+      <h2>Homelessness: How We're Responding with Action and Compassion</h2>
+      <ul>
+        <li><strong>Step Court Program:</strong> A carrot-and-stick approach for individuals with multiple infractions. People can choose to accept services (rehab, mental health, housing pathways) instead of jail time. This is our local implementation of Prop 36, and has been happening in Santa Monica before Prop 36 was voted on.</li>
+        <li><strong>Step Ahead Event - May 14th, 9am–1pm (Civic Center Lot):</strong> Connects unhoused individuals with medical, legal, and housing services in one place. Celebrates the folks who have graduated out of the Step Court program and will hold opportunities for others to get in front of a judge and choose the program over jail time to help get people housed and out of the justice system. It is open to the public if you’d like to witness this program in action. (See Flyer attached)</li>
+        <li><strong>PSH Bridge Program:</strong> A grant-funded initiative that provides a temporary place for police to bring individuals who can't legally be jailed—but who pose ongoing public safety concerns. This was funded by a grant from Prop 47 and requested by SMPD and our City Attorney’s office as a tool to address the service resistant folks on our streets. Our hands are often tied at the local level in removing those who are service resistant off the streets; due to state and federal laws so we are left to fund programs to try to gnaw at the edges of these huge problems.</li>
+        <li><strong>Mental Health Crisis Vans (Pending):</strong> I'm fighting to secure funds from Measure PSK to run a 24/7 mental health crisis van program that takes pressure off our firefighters and truly meets people where they are. This van will take over calls related to homelessness to relieve our engines and firefighters so they can maintain their amazing response times to life threatening calls. It also keeps them from being stuck in emergency rooms as they admit unhoused individuals who are eventually let out a few hours later. This van can transport 5150 (those who may be a danger to themselves or others) to Exodus, a mental facility, take them to the hospital if needed and connect them with other service providers. Eventually the goal is to add a nurse practitioner to the unit, when we can fully fund it, and perform street medicine and transport farther outside of Santa Monica utilizing county facilities and not just depend on city of Santa Monica facilities and services.</li>
+      </ul>
+      <p>We are doing our best within legal and fiscal limits—but I’ll be honest: we’re only scratching the surface. Until there’s a statewide system for conservatorship and new regional mental health infrastructure, cities like ours will continue to face limits.</p>
+      <hr>
+    </div>
+    <div class="section section-white">
+      <h2>Economic Recovery: Momentum in Motion</h2>
+      <ul>
+        <li><strong>Welcome to Armine Chaparyan:</strong> We’ve hired a new Community Development Director! Armine brings an innovative, business-forward approach. I’m excited to collaborate with her to make Santa Monica more business-friendly and community-centered. In fact we have already started! She created an internal economic task force as well as one with 3 of us council members. I am happy to serve on it and we are already bringing bright ideas that our new director is looking forward to implementing.</li>
+        <li><strong>Entertainment Zone Returns – May 13:</strong> Thoughtfully designed for safety and vibrancy, this zone will help activate our downtown core with responsible fun. The details of the slow roll out will be discussed on May 13th; feel free to write in your thoughts on how you see it being successful.</li>
+        <li><strong>New Tenants on the Promenade:</strong> From Outlandish TikTok creator studios to new eateries like Din Tai Fung and Fogo de Chao and retail concepts, we’re bringing life back to our core commercial districts. Here is a peek at what’s already opened and what’s coming to the Downtown area in the coming months: Google store and Anytime Fitness opened in March of this year, Pickle, Paddle, Paws and Fogo De Chao in April, Santa Monica Art Museum with a new installation this month and Bacio di Latte is deep in a remodel mode but coming soon. There are also a few who have named us as a new location but have yet to pull permits – once those become a reality I will continue to share the list!</li>
+        <li><strong>LA28 &amp; International Collaboration:</strong> While LA28 stopped formal negotiations with Santa Monica due to financial concerns, we’re already in talks with the IOC and other partners to still play a hosting role for International Athlete houses and hopefully being the stage for broadcasting. Santa Monica will shine regardless! The good news is that these types of partnerships come with upfront financial benefits to the city, which in turn play into the above general fund deficits we need to fill!</li>
+      </ul>
+      <hr>
+    </div>
+    <div class="section section-white">
+      <h2>Let’s Connect</h2>
+      <div style="background-color:#f5f9fd; border-left: 6px solid #46a0ea; border-radius: 8px; padding: 18px 18px 18px 24px; margin-bottom: 18px; display: flex; align-items: center;">
+        <span style="font-size: 2em; margin-right: 18px;">🍦</span>
+        <div style="flex: 1;">
+          <div style="font-size: 1.25em; font-weight: bold; color: #2c3e50; margin-bottom: 4px;">May 13, 3:30–5 PM @ Handles Ice Cream</div>
+          <div style="font-size: 1em; color: #2980b9; font-weight: 600; margin-bottom: 6px;">Ocean Park & 17th, Santa Monica</div>
+          <div style="font-size: 1em; color: #444; margin-bottom: 10px;">Come share a cone, support a local business, ask questions and share your thoughts with me at this Ice Cream Social!</div>
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ice+Cream+Social+with+Mayor+Lana+Negrete&dates=20250513T223000Z/20250514T000000Z&details=Come+share+a+cone,+support+a+local+business,+ask+questions+and+share+your+thoughts+with+Mayor+Lana+Negrete+at+Handles+Ice+Cream,+Ocean+Park+and+17th,+Santa+Monica!&location=Handles+Ice+Cream,+Ocean+Park+and+17th,+Santa+Monica&sf=true" target="_blank" style="background-color: #46a0ea; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 1em; display: inline-block;">➕ Add to Calendar</a>
+        </div>
+      </div>
+      <p><strong>Mocktails with the Mayor – Coming Soon!</strong> Stay tuned for a special alcohol-free town hall where we can connect in a relaxed setting. You’ll be able to submit questions and share what matters most to you.</p>
+      <p><em>Final Thought:</em> I’m just one voice on a seven-member council. Real power comes when the community is informed, involved, and inspired. I hope this update helps you feel a bit closer to the work and the vision driving it.</p>
+      <p>With care and commitment,</p>
+      <p>Lana Negrete<br>Mayor, City of Santa Monica</p>
+    </div>
+
+ 
+  </div>
+  </div>
+
+                </div>
+                <!-- Main Content End-->
+            </td>
+        </tr>
+        <!-- Content -->
+        <tr>
+            <td align="center">
+                <!-- Social Links -->
+                <div class="social-links">
+                    <h2 class="social-heading">Connect with Me</h2>
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" class="social-table" style="width: 80%; max-width: 400px; margin: 0% 13%;">
+                        <tr>
+                            <td class="social-cell">
+                                <a href="https://www.instagram.com/lananegretesantamonica/" target="_blank" class="social-link">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td class="social-button">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon" />
+                                             </td>
+                                        </tr>
+                                    </table>
+                                </a>
+                            </td>
+                            <td class="social-cell">
+                                <a href="https://twitter.com/lananegrete" target="_blank" class="social-link">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td class="social-button">
+                                                <img src="https://banner2.cleanpng.com/20240119/sut/transparent-x-logo-logo-brand-identity-company-organization-black-background-white-x-logo-for-1710916376217.webp" alt="X" class="social-icon" />
+                                             </td>
+                                        </tr>
+                                    </table>
+                                </a>
+                            </td>
+                            <td class="social-cell">
+                                <a href="https://www.facebook.com/lana.fernandeznegrete" target="_blank" class="social-link">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td class="social-button">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/512px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook" class="social-icon" />
+                                             </td>
+                                        </tr>
+                                    </table>
+                                </a>
+                            </td>
+                            <td class="social-cell">
+                                <a href="https://www.mygovtools.org/join?newsletter=LanaNegrete" target="_blank" class="social-link">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td class="subscribe-button">
+                                                <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Subscribe" class="subscribe-icon" />
+                                                <span class="subscribe-text">Subscribe</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- GovTools-->
+                <h2 style="text-align: center; color: #46a0ea; margin: 25px 0 15px 0;">GovTools Resources</h2>
+                <table class="two-column">
+                    <tr>
+                        <!-- Events -->
+                        <td valign="top">
+                            <div class="card">
+                                <h2>Get Involved</h2>
+                                <!-- Event Slots -->
+                                
+                                <div class="event-item">
+                                    <span class="date">{{ event_1_date }}</span><br>
+                                    <a class="event-name" href="{{ event_1_url }}">{{ event_1_title }}</a><br>
+                                    <span class="event-source">{{ event_1_source }}</span>
+                                </div>
+                                <div class="event-item">
+                                    <span class="date">{{ event_2_date }}</span><br>
+                                    <a class="event-name" href="{{ event_2_url }}">{{ event_2_title }}</a><br>
+                                    <span class="event-source">{{ event_2_source }}</span>
+                                </div>
+                                <div class="event-item">
+                                    <span class="date">{{ event_3_date }}</span><br>
+                                    <a class="event-name" href="{{ event_3_url }}">{{ event_3_title }}</a><br>
+                                    <span class="event-source">{{ event_3_source }}</span>
+                                </div>
+                                <div class="event-item">
+                                    <span class="date">{{ event_4_date }}</span><br>
+                                    <a class="event-name" href="{{ event_4_url }}">{{ event_4_title }}</a><br>
+                                    <span class="event-source">{{ event_4_source }}</span>
+                                </div>
+                                <div class="event-item">
+                                    <span class="date">{{ event_5_date }}</span><br>
+                                    <a class="event-name" href="{{ event_5_url }}">{{ event_5_title }}</a><br>
+                                    <span class="event-source">{{ event_5_source }}</span>
+                                </div>
+                        
+                                <a href="{{ events_url }}" class="button">View All Events</a>
+                            </div>
+                        </td>
+                        <!-- News -->
+                        <td valign="top">
+                            <div class="card">
+                                <h2>Get Informed</h2>
+                                <!-- News Slots -->
+                                <div class="news-item">
+                                    <a href="{{ news_1_url }}">
+                                        {{ news_1_title }}</a><br>
+                                        <span class="publisher">- {{ news_1_publisher }}</span>
+                                    </a>
+                                </div>
+                               
+                                <div class="news-item">
+                                    <a href="{{ news_4_url }}">
+                                        {{ news_4_title }}</a><br>
+                                        <span class="publisher">- {{ news_4_publisher }}</span>
+                                    </a>
+                                </div>
+                                <div class="news-item">
+                                    <a href="{{ news_5_url }}">
+                                        {{ news_5_title }}</a><br>
+                                        <span class="publisher">- {{ news_5_publisher }}</span>
+                                    </a>
+                                </div>
+                                <div class="news-item">
+                                    <a href="{{ news_6_url }}">
+                                        {{ news_6_title }}</a><br>
+                                        <span class="publisher">- {{ news_6_publisher }}</span>
+                                    </a>
+                                </div>
+                                <div class="news-item">
+                                    <a href="{{ news_7_url }}">
+                                        {{ news_7_title }}</a><br>
+                                        <span class="publisher">- {{ news_7_publisher }}</span>
+                                    </a>
+                                </div>
+
+
+                                <a href="{{ news_url }}" class="button">View All News</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- Footer -->
+        <tr>
+            <td align="center" class="footer">
+                <p>
+                    For inquiries, suggestions, requests, or feedback, please reply to this email or contact us at 
+                    <a href="mailto:evan@mygovtools.org">evan@mygovtools.org</a> or 
+                    <a href="https://mygovtools.org/contact">MyGovTools.org</a>.
+                </p>
+                <p class="footer-tagline">
+                    &copy; {{ current_year }} MyGovTools.org. All rights reserved.
+                </p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
